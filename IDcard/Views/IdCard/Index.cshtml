@@ -1,0 +1,103 @@
+﻿@model IEnumerable<Student.Models.IdCardStructure>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Student Details</h2>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EmpList</title>
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.intStudentID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strStudentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strDateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lngContactNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strAddress1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strAddress2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strLandMark)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.intPincode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strPhoto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strAlternativeName)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.intStudentID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.strStudentName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.strDateOfBirth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.lngContactNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.strAddress1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.strAddress2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.strLandMark)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.strCity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.intPincode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.strPhoto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.strAlternativeName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.intStudentID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.intStudentID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.intStudentID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>

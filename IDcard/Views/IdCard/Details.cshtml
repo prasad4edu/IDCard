@@ -1,0 +1,106 @@
+﻿@model Student.Models.IdCardStructure
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Student Details</h2>
+
+<div>
+    <h4> @Html.DisplayFor(model => model.strStudentName) Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.intStudentID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.intStudentID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.strStudentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.strStudentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.strDateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.strDateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lngContactNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lngContactNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.strAddress1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.strAddress1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.strAddress2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.strAddress2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.strLandMark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.strLandMark)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.strCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.strCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.intPincode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.intPincode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.strPhoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.strPhoto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.strAlternativeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.strAlternativeName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.intStudentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
