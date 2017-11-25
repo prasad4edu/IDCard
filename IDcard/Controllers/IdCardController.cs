@@ -104,12 +104,13 @@ namespace IDcard.Controllers
 
         // POST: IdCard/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, IdCardStructure collection)
         {
             try
             {
                 // TODO: Add delete logic here
-                ((IEnumerable<IdCardStructure>)Session["Data"]).Where(x => x.intStudentID == id).ToList().Remove(((IEnumerable<IdCardStructure>)Session["Data"]).Where(x => x.intStudentID == id).ToList().FirstOrDefault());
+                IdCardStructure objDelte = ((List<IdCardStructure>)Session["Data"]).Where(x => x.intStudentID == id).ToList().FirstOrDefault();
+                ((List<IdCardStructure>)Session["Data"]).Remove(objDelte);
                 return RedirectToAction("Index");
             }
             catch
